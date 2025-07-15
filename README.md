@@ -11,12 +11,12 @@ Each script is modular, well-documented, and uses Python's standard library wher
 
 
 
-| Script                          | Description                                 |
-|-------------------------------|---------------------------------------------|
-| disk_usage_email_alert.py      | Sends email if disk usage exceeds threshold |
-| backup_folder.py               | Creates zip backups of target folder        |
-| rename_bulk_files.py           | Renames files in bulk using custom pattern  |
-
+| Script                          | Description                                              |
+|-------------------------------|------------------------------------------------------------|     
+| disk_usage_email_alert.py      | Sends email if disk usage exceeds threshold               |
+| backup_folder.py               | Creates zip backups of target folder                      |
+| rename_bulk_files.py           | Renames files in bulk using custom pattern                |
+| s3_backup_uploader.py          | Uploads .zip files to AWS S3 with tags and error handling |
 As new scripts are added, this table will grow to showcase automation examples across system monitoring, file handling, reporting, and more.
 
 ## Getting Started
