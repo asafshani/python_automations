@@ -19,6 +19,7 @@ Each script is modular, well-documented, and uses Python's standard library wher
 | s3_backup_uploader.py          | Uploads .zip files to AWS S3 with tags and error handling                            |
 | nightly_ec2_shutdown.py        | Stops EC2 instances tagged `Shutdown=true` every 5 minutes via EventBridge Scheduler |
 | cross_account_s3.py            | Assumes IAM role in another AWS account to access S3 bucket and list stored objects  |
+| retreive_from_secret_manager   | Retrieves the secret from secret manager                                             |
 
 ## Getting Started
 
