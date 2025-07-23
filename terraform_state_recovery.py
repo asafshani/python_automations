@@ -2,7 +2,7 @@
 # This script connects to an S3 backend storing a Terraform state file,
 # lists previous versions (if versioning is enabled), and downloads a recovered
 # version of the state file to help recover from corruption or misconfiguration.
-# It now prompts the user to input the S3 bucket name and file path manually.
+# It prompts the user to input the S3 bucket name and file path manually.
 
 import boto3  # AWS SDK for Python
 import sys    # For exiting the script if something goes wrong
@@ -42,10 +42,10 @@ def recover_state():
                 Filename=DESTINATION_FILE,
                 ExtraArgs={'VersionId': version_id}
             )
-            print(f"\n✅ Recovered state file saved as: {DESTINATION_FILE}")
+            print(f"\nRecovered state file saved as: {DESTINATION_FILE}")
             return
         except Exception as e:
-            print(f"⚠️ Error downloading version {version_id}: {e}")
+            print(f"Error downloading version {version_id}: {e}")
 
     # If no version succeeded, notify the user
     print("No valid version could be recovered.")
