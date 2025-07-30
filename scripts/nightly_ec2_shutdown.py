@@ -1,12 +1,12 @@
 import boto3
-from datetime import datetime
+from datetime import datetime ,timezone
 
 # Initialize EC2 resource using default region from Lambda's execution environment
-ec2 = boto3.resource('ec2')
+ec2 = boto3.resource('ec2') #this creates and ec2 object you can use to filter, stop or check instances
 
 def lambda_handler(event, context):
     # Log timestamp each time the function is triggered (useful for CloudWatch visibility)
-    print("Lambda triggered at:", datetime.utcnow().isoformat())
+    print("Lambda triggered at:", datetime.now(timezone.utc).isoformat())
 
     # Define filters to find EC2 instances:
     # - Tagged with Shutdown=true
@@ -22,7 +22,7 @@ def lambda_handler(event, context):
 
     # Extract instance IDs from the filtered results
     instance_ids = [i.id for i in instances] # list comprehension:
-    #for every ec2 instance in the object i in the filtered results called instances,extarct its id and collect thos into a list
+    #for every ec2 instance in the object i in the filtered results called instances,extarct its id and collect those into a list
 
     # If matching instances are found, stop them
     if instance_ids:
