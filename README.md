@@ -22,6 +22,7 @@ Each script is modular, well-documented, and uses Python's standard library wher
 | retreive_from_secret_manager.py| Retrieves the secret from secret manager                                             |
 | backup_by_age.py               | copy files older than defined number of days from a source to a backup folder        |
 | sendtosqs.py                   | sends an S3 record to SQS                                                            |    
+| resize_image.py                | resizes and image from S3                                                            |
 ## Getting Started
 
 1. Clone this repository:
