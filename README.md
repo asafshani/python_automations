@@ -21,6 +21,7 @@ Each script is modular, well-documented, and uses Python's standard library wher
 | cross_account_s3.py            | Assumes IAM role in another AWS account to access S3 bucket and list stored objects  |
 | retreive_from_secret_manager.py| Retrieves the secret from secret manager                                             |
 | backup_by_age.py               | copy files older than defined number of days from a source to a backup folder        |
+| sendtosqs.py                   | sends an S3 record to SQS                                                            |    
 ## Getting Started
 
 1. Clone this repository:
