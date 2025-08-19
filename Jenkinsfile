@@ -14,5 +14,10 @@ pipeline {
             }
         }
     }
+    post{
+      always {
+       echo 'pipeline finished!'
+       cleanWs()
+      }
 }
-
+}
